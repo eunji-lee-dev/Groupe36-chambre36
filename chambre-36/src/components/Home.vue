@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <div class="home-background">
         <p>10:12</p>
         <div class="home-login">
@@ -25,14 +24,10 @@
             </div>
         </div>
     </div>
-=======
-  <div></div>
->>>>>>> 360f43f (Add: router)
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
     name: 'Home',
     data() {
         return {
@@ -102,8 +97,4 @@ export default {
     left: 25%;
 }
 </style>
-=======
-  name: "Home"
-}
-</script>
->>>>>>> 360f43f (Add: router)
+

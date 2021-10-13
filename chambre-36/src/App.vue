@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
+
     <Home @checkPassword="check" v-if="password != passwordCheck" />
     <div v-if="password == passwordCheck" id="wallpaper"></div>
     <Navbar v-if="password == passwordCheck" />
     <Toolbar v-if="password == passwordCheck" class="toolbar"/>
-=======
+
     <login />
     <router-view />
->>>>>>> 360f43f (Add: router)
   </div>
 </template>
 
