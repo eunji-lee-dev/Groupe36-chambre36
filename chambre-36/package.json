@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "nuxt-property-decorator": "^2.9.1",
+    "vue": "^2.6.11",
+    "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^2.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
