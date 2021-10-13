@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <Desktop/>
+    <div id="wallpaper"></div>
+    <Navbar />
     <!-- <Home/> -->
   </div>
 </template>
 
 <script>
-import Desktop from "./components/Desktop.vue"
 // import Home from './components/Home.vue'
+import Navbar from "@/components/Navbar.vue"
 
 export default {
   name: 'App',
   components: {
-    Desktop
-    // Home
+    // Home,
+    Navbar
 
   }
 }
@@ -32,5 +33,12 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#wallpaper {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(assets/imgs/homebackgroundflou.png);
 }
 </style>
