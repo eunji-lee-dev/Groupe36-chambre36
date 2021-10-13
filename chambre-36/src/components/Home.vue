@@ -2,7 +2,7 @@
     <div class="home-background">
         <p>10:12</p>
         <div class="home-login">
-            <img src="" alt="">
+            <img src="../assets/imgs/imageprofil.jpg" alt="Image de profil de Chloé">
             <p>Chloé</p>
             <form>
                 <img src="" alt="">
@@ -49,19 +49,33 @@ export default {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 80%;
+    height: 75%;
     z-index: 1;
 }
 
+.home-login img {
+    width: 130px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
 .home-login p {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .home-login input {
     border-radius: 5px;
     border: none;
-    padding: 8px 10px;
+    padding: 8px 14px;
     width: 200px;
+    background-color: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(6px);
+    color: white;
+}
+
+.home-login input::placeholder {
+    color: whitesmoke;
 }
 
 .home-buttons {
