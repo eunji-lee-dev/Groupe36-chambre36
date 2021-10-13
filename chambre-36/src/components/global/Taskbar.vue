@@ -29,9 +29,9 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #D2D2D2;
-    font-size: 12px;
-    height: 42px;
+    background-color: rgba(255,255,255,0.6);
+    font-size: 10px;
+    height: 30px;
   }
   #taskbar .left {
     display: flex;
@@ -39,9 +39,12 @@ export default {
   }
 
   #taskbar .left > img,  #taskbar .left > p {
-    margin: 10px;
+    margin: 8px;
   }
 
+  #taskbar .left img {
+    width: 15px;
+  }
   #taskbar .right {
     display: flex;
     align-items: center;

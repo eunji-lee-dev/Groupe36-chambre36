@@ -21,9 +21,6 @@
 <script>
   export default {
     name: "BrowserInterface",
-    props: {
-      isDisplayed: Boolean
-    }
   }
 </script>
 
@@ -39,16 +36,16 @@
   }
   #browser .browserBar {
     display: flex;
-    height: 48px;
+    height: 35px;
     background-color: #3B4044;
     align-items: center;
     border-radius: 7px 7px 0 0;
   }
   #browser .browserBar .circle {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    margin: 0 7px;
+    margin: 0 5px;
   }
   #browser .browserBar .circle:first-child {
     background-color: #FE615E;
@@ -63,11 +60,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    background-color: #D4D4D4;
+    height: 50px;
+    background-color: rgba(255,255,255,0.6);
   }
   #header .left img {
-    width: 57px;
+    width: 35px;
+    margin-left: 10px;
   }
   #header .right {
     margin: 10px;
@@ -80,9 +78,12 @@
     color: #707070;
     text-transform: uppercase;
     margin: 0 10px;
-    font-size: 16px;
+    font-size: 13px;
   }
   #header .right li:last-child {
     margin-right: 10px;
+  }
+  #header .right li a:hover{
+    color: #fff;
   }
 </style>

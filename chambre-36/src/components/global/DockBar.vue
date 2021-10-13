@@ -23,7 +23,7 @@ export default {
 
   #dockBar {
     width: 750px;
-    background-color: #D2D2D2;
+    background-color: rgba(212,212,212,0.5);
     border-radius: 20px;
     height: 70px;
     margin: 0 auto;

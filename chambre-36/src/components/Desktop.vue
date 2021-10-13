@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div>
         <Navbar />
     </div>
@@ -19,3 +20,13 @@ export default {
 
 
 </style>
+=======
+  <div></div>
+</template>
+
+<script>
+export default {
+  name: "Desktop"
+}
+</script>
+>>>>>>> 360f43f (Add: router)
