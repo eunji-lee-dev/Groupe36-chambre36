@@ -30,7 +30,6 @@
     height: 100%;
   }
   #browser {
-    width: 900px;
     border-radius: 7px;
     height: auto;
   }

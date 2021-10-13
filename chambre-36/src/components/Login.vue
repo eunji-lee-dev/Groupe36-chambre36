@@ -11,28 +11,24 @@
         <p><a href="#">Mot de Passe oublié</a></p>
       </form>
     </div>
-
-    <DockBar class="dockBar"/>
+    <Toolbar class="toolbar" />
   </div>
 </template>
 
 <script>
 import Taskbar from "@/components/global/Taskbar";
-import DockBar from "@/components/global/DockBar";
 import BrowserInterface from "@/components/global/BrowserInterface";
+import Toolbar from "@/components/Toolbar";
 
 export default {
   name: "Login",
-  components: {BrowserInterface, DockBar, Taskbar}
+  components: {Toolbar, BrowserInterface, Taskbar}
 }
 
 </script>
 
 <style>
 body {
-  margin: 0;
-  padding: 0;
-  box-shadow:none;
   background: url("../assets/imgs/bg2.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -43,8 +39,10 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
+  text-align: center;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 #all .taskbar {
   position: absolute;
@@ -52,21 +50,23 @@ body {
   width: 100%;
 }
 #all .browser {
-  margin: auto;
+  width: 80%;
   height: 500px;
   background-image: url("../assets/imgs/bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 7px;
   border: 1px solid rgba(255,255,255,0.2);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
 #all .browser .login input:focus{
   outline: none;
 }
-
 #all .browser .login {
-  width: 300px;
+  max-width: 300px;
   height: 330px;
   margin: 20px auto;
   background-color: rgba(255,255,255,0.6);
@@ -98,10 +98,5 @@ body {
   font-size: 14px;
   color: #5A6DFF;
 }
-#all .dockBar {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 </style>

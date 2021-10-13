@@ -3,9 +3,14 @@
         <img src="../assets/imgs/icon2.png" alt="Icône de Finder">
         <img src="../assets/imgs/icon3.png" alt="Icône">
         <img src="../assets/imgs/icon4.png" alt="Icône du calendrier">
-        <img class="open" src="../assets/imgs/icon5.png" alt="Icône de Safari">
+        <router-link to="/Login">
+          <img class="open" src="../assets/imgs/icon5.png" alt="Icône de Safari">
+        </router-link>
         <img src="../assets/imgs/icon6.png" alt="Icône de AppleTV">
-        <img class="open" src="../assets/imgs/icon7.png" alt="Icône de Mail">
+        <router-link to="/Mail">
+          <img class="open" src="../assets/imgs/icon7.png" alt="Icône de Mail">
+        </router-link>
+
         <img src="../assets/imgs/icon8.png" alt="Icône de Adobe Illustrator 2020">
         <img src="../assets/imgs/icon9.png" alt="Icône de Adobe Photoshop 2020">
         <img src="../assets/imgs/icon10.png" alt="Icône de Règlage">
@@ -29,6 +34,12 @@ nav {
     backdrop-filter: blur(6px);
     padding: 10px 10px;
     border-radius: 30px;
+
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 img {

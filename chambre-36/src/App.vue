@@ -3,8 +3,8 @@
 
     <Home @checkPassword="check" v-if="password != passwordCheck" />
     <div v-if="password == passwordCheck" id="wallpaper"></div>
-    <Navbar v-if="password == passwordCheck" />
-    <Toolbar v-if="password == passwordCheck" class="toolbar"/>
+<!--    <Navbar v-if="password == passwordCheck" />-->
+<!--    <Toolbar v-if="password == passwordCheck" class="toolbar"/>-->
 
     <login />
     <router-view />
@@ -13,8 +13,8 @@
 
 <script>
 import Home from './components/Home.vue'
-import Navbar from "@/components/Navbar.vue"
-import Toolbar from "@/components/Toolbar.vue"
+// import Navbar from "@/components/Navbar.vue"
+// import Toolbar from "@/components/Toolbar.vue"
 
 
 export default {
@@ -27,8 +27,7 @@ export default {
   },
   components: {
     Home,
-    Navbar,
-    Toolbar
+    // Toolbar
   },
   methods: {
     check(HomePassword){
@@ -52,13 +51,15 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  box-shadow:none;
 }
 
 #wallpaper {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-image: url(assets/imgs/homebackground.jpg);
+  background: url(assets/imgs/bg2.jpg) no-repeat center center fixed;
+  background-size: cover;
   z-index: -1;
 }
 

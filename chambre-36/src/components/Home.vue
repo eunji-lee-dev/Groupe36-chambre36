@@ -47,10 +47,13 @@ export default {
 .home-background {
     height: 100vh;
     width: 100%;
-    background-image: url(../assets/imgs/homebackgroundflou.png);
     color: white;
+    background: url(../assets/imgs/bg2.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
-
+.home-background p, .home-background .home-login, .home-background .home-buttons {
+    backdrop-filter: blur(3px);
+}
 .home-background p:first-child {
     text-align: end;
     padding: 10px 30px;
