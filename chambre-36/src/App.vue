@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <Desktop />
+    <Desktop/>
+    <!-- <Home/> -->
   </div>
 </template>
 
 <script>
 import Desktop from "./components/Desktop.vue"
+// import Home from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
     Desktop
+    // Home
+
   }
 }
 </script>
@@ -22,6 +26,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 </style>
