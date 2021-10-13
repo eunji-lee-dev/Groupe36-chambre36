@@ -36,7 +36,8 @@ export default {
 .home-background {
     height: 100vh;
     width: 100%;
-    background-color: aqua;
+    background-image: url(../assets/imgs/homebackground.jpg);
+    color: white;
 }
 
 .home-background p:first-child {
@@ -48,5 +49,27 @@ export default {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 80%;
+    z-index: 1;
+}
+
+.home-login p {
+    margin: 15px 0;
+}
+
+.home-login input {
+    border-radius: 5px;
+    border: none;
+    padding: 8px 10px;
+    width: 200px;
+}
+
+.home-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 10vh;
+    left: 25%;
 }
 </style>
