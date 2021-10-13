@@ -37,6 +37,7 @@ export default {
     methods:{
         submit(){
             this.$emit('checkPassword', { passwordEnter: this.password })
+            this.$router.push( {name: 'Desktop'})
         }
     }
 }
