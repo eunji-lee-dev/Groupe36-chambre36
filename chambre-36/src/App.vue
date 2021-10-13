@@ -1,21 +1,23 @@
 <template>
   <div id="app">
+    <Home/>
     <div id="wallpaper"></div>
     <Navbar />
-    <!-- <Home/> -->
+    <Toolbar class="toolbar"/>
   </div>
 </template>
 
 <script>
 // import Home from './components/Home.vue'
 import Navbar from "@/components/Navbar.vue"
+import Toolbar from "@/components/Toolbar.vue"
 
 export default {
   name: 'App',
   components: {
     // Home,
-    Navbar
-
+    Navbar,
+    Toolbar
   }
 }
 </script>
@@ -39,6 +41,15 @@ export default {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-image: url(assets/imgs/homebackgroundflou.png);
+  background-image: url(assets/imgs/homebackground.jpg);
+  z-index: -1;
+}
+
+.toolbar {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 </style>
