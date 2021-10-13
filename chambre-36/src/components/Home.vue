@@ -4,10 +4,10 @@
         <div class="home-login">
             <img src="../assets/imgs/imageprofil.jpg" alt="Image de profil de Chloé">
             <p>Chloé</p>
-            <form>
+            <div>
                 <img src="" alt="">
-                <input type="text" placeholder="Mot de passe">
-            </form>
+                <input v-model="password" @keyup.enter="submit" type="text" placeholder="Mot de passe">
+            </div>
         </div>
         <div class="home-buttons">
             <div>
@@ -28,7 +28,17 @@
 
 <script>
 export default {
-    name: 'Home'
+    name: 'Home',
+    data() {
+        return {
+            password: ""
+        }
+    },
+    methods:{
+        submit(){
+            this.$emit('checkPassword', { passwordEnter: this.password })
+        }
+    }
 }
 </script>
 

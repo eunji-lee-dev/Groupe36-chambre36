@@ -1,23 +1,35 @@
 <template>
   <div id="app">
-    <Home/>
-    <div id="wallpaper"></div>
-    <Navbar />
-    <Toolbar class="toolbar"/>
+    <Home @checkPassword="check" v-if="password != passwordCheck" />
+    <div v-if="password == passwordCheck" id="wallpaper"></div>
+    <Navbar v-if="password == passwordCheck" />
+    <Toolbar v-if="password == passwordCheck" class="toolbar"/>
   </div>
 </template>
 
 <script>
-// import Home from './components/Home.vue'
+import Home from './components/Home.vue'
 import Navbar from "@/components/Navbar.vue"
 import Toolbar from "@/components/Toolbar.vue"
 
 export default {
   name: 'App',
+  data() {
+      return {
+          password: "123456",
+          passwordCheck: "",
+      }
+  },
   components: {
-    // Home,
+    Home,
     Navbar,
     Toolbar
+  },
+  methods: {
+    check(HomePassword){
+      this.passwordCheck = HomePassword.passwordEnter
+      console.log(HomePassword.passwordEnter)
+    }
   }
 }
 </script>
