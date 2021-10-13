@@ -36,20 +36,20 @@ export default {
 .home-background {
     height: 100vh;
     width: 100%;
-    background-image: url(../assets/imgs/homebackground.jpg);
+    background-image: url(../assets/imgs/homebackgroundflou.png);
     color: white;
 }
 
 .home-background p:first-child {
     text-align: end;
-    padding: 20px 50px;
+    padding: 10px 30px;
 }
 
 .home-login {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 75%;
+    height: 80%;
     z-index: 1;
 }
 
