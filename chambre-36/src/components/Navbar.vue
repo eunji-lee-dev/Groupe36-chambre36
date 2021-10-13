@@ -56,7 +56,7 @@ nav {
 }
 
 .navbar-last {
-    width: 17vw;
+    width: 20vw;
 }
 
 .navbar-first p:first-of-type {
@@ -66,7 +66,7 @@ nav {
 .navbar-last div {
     display: flex;
     justify-content: space-between;
-    width: 4vw;
+    width: 5vw;
 }
 
 .navbar-last img {
