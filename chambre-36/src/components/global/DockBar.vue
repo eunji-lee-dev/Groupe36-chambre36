@@ -26,7 +26,7 @@ export default {
     background-color: #D2D2D2;
     border-radius: 20px;
     height: 70px;
-    margin: auto;
+    margin: 0 auto;
   }
   #dockBar img {
     width: 50px;

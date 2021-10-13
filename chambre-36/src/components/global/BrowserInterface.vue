@@ -15,23 +15,27 @@
         <li><a href="#">mon espace</a></li>
       </ul>
     </div>
-    <div class="contents"></div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "BrowserInterface"
+    name: "BrowserInterface",
+    props: {
+      isDisplayed: Boolean
+    }
   }
 </script>
 
 <style>
 
+  body {
+    height: 100%;
+  }
   #browser {
     width: 900px;
-    background-color: #7C7C7C;
     border-radius: 7px;
-    height: 500px;
+    height: auto;
   }
   #browser .browserBar {
     display: flex;
