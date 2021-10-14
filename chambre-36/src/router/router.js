@@ -7,6 +7,7 @@ import Login from "@/components/Login";
 import BlogHome from "@/components/BlogHome";
 import BlogDraft from "@/components/BlogDraft";
 import MyModal from "@/components/global/MyModal";
+import Mail from "@/components/Mail";
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router ({
             path: "/MyModal",
             name: "MyModal",
             component: MyModal
-        }
+        },
+        {
+            path: "/Mail",
+            name: "Mail",
+            component: Mail
+        },
     ]
 })
