@@ -101,9 +101,9 @@
                     <template v-slot:description>Prêtes pour la saison des sweats avec boohoo, profite de -50% !</template>
                 </email-list>
                 <email-list>
-                    <template v-slot:title>Doctolib</template>
+                    <template v-slot:title>Bilan de santé Mlle Chloé Devers</template>
                     <template v-slot:hour>hier</template>
-                    <template v-slot:description>Bonjour Sarah, votre médecin vous a laissé un message. Pour le con...</template>
+                    <template v-slot:description>Bonjour Mlle Devers, je fais suite à votre bilan de santé du 12/10... </template>
                 </email-list>
                 <email-list>
                     <template v-slot:title>Portail étudiant</template>
@@ -124,7 +124,26 @@
         </div>
         <!-- End of the middle section -->
         <div>
+            <div>
 
+            </div>
+            <!-- End of the icons section -->
+            <email-description>
+                <template v-slot:title>Bilan de santé Mlle Chloé Devers</template>
+                <template v-slot:hour>hier</template>
+                <template v-slot:From>drhubert@gmail.com</template>
+                <template v-slot:To>chloe.devers@gmail.com</template>
+                <template v-slot:text>
+                    Bonjour Mlle Devers,
+                    <br><br>
+                    je fais suite à votre bilan de santé du 12/10/2021. Après analyse de votre bilan sanguin, j'ai pu apercevoir des taux assez bas. Après avoir évoqué votre perte de poids soudain lors de notre dernier rendez-vous, je souhaiterais désormais m'entretenir avec vous en face à face.
+                    Veuillez contacter mon secrétariat au 09 07 67 67 24.
+                    <br><br>
+                    Bien cordialement,
+                    <br>
+                    Dr. Hubert
+                </template>
+            </email-description>
         </div>
         <!-- End of the right section -->
     </div>
@@ -132,11 +151,13 @@
 
 <script>
 import EmailList from '@/components/mail/EmailList'
+import EmailDescription from '../mail/EmailDescription.vue'
 
 export default {
   name: "MailInterface",
   components: {
-      EmailList
+      EmailList,
+      EmailDescription
   }
 }
 </script>
