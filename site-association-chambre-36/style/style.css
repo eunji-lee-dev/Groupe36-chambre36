@@ -87,3 +87,45 @@ nav a {
 .cyber h2 {
     margin-bottom: 40px;
 }
+
+.partners {
+    width: 80%;
+    margin: 10vh auto 0;
+}
+
+.partners h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+}
+
+.partners div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.partners img {
+    height: 16vh;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > img {
+    height: 20vh;
+    margin: 60px 0 50px;
+}
+
+footer > div > img {
+    width: 150px;
+    margin: 0 30px;
+}
+
+footer > div {
+    display: flex;
+    align-items: center;
+}
