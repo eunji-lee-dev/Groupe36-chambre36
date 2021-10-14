@@ -29,6 +29,7 @@ nav {
     width: fit-content;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     background-color: rgba(180, 180, 180, 0.219);
     backdrop-filter: blur(6px);
@@ -49,7 +50,7 @@ img {
     cursor: pointer;
 }
 
-img:last-of-type {
+nav > img:last-of-type {
     width: 70px;
     padding-left: 10px;
     border-left: 1px solid rgb(46, 46, 46);

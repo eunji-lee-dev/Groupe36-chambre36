@@ -29,7 +29,7 @@ export default {
 
 <style>
 body {
-  background: url("../assets/imgs/bg2.jpg") no-repeat center center fixed;
+  background: url("../assets/imgs/homebackground.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

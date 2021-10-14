@@ -30,12 +30,16 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     background-color: rgba(255,255,255,0.6);
-    font-size: 10px;
+    font-size: 12px;
     height: 30px;
   }
   #taskbar .left {
     display: flex;
     align-items: center;
+  }
+
+  #taskbar .left p:first-of-type {
+    font-weight: bold;
   }
 
   #taskbar .left > img,  #taskbar .left > p {

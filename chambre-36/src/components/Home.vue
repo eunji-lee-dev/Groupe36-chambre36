@@ -4,9 +4,10 @@
         <div class="home-login">
             <img src="../assets/imgs/imageprofil.jpg" alt="Image de profil de Chloé">
             <p>Chloé</p>
+            <p v-show="check === 'false'">Mot de passe incorrect</p>
             <div>
                 <img src="" alt="">
-                <input v-model="password" @keyup.enter="submit" type="text" placeholder="Mot de passe">
+                <input v-model="passwordToCheck" @keyup.enter="submit" type="text" placeholder="Mot de passe">
             </div>
         </div>
         <div class="home-buttons">
@@ -31,13 +32,18 @@ export default {
     name: 'Home',
     data() {
         return {
-            password: ""
+            password: "123456",
+            passwordToCheck: "",
+            check: ""
         }
     },
     methods:{
         submit(){
-            this.$emit('checkPassword', { passwordEnter: this.password })
-            this.$router.push( {name: 'Desktop'})
+            if(this.passwordToCheck == this.password) {
+                this.$router.push( {name: 'Desktop'})
+            } else {
+                this.check = "false"
+            }
         }
     }
 }
@@ -48,12 +54,10 @@ export default {
     height: 100vh;
     width: 100%;
     color: white;
-    background: url(../assets/imgs/bg2.jpg) no-repeat center center fixed;
+    background: url(../assets/imgs/homebackground.jpg) no-repeat center center fixed;
     background-size: cover;
 }
-.home-background p, .home-background .home-login, .home-background .home-buttons {
-    backdrop-filter: blur(3px);
-}
+
 .home-background p:first-child {
     text-align: end;
     padding: 10px 30px;

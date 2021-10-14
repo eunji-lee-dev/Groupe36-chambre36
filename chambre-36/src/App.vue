@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
+// import Home from './components/Home.vue'
 // import Navbar from "@/components/Navbar.vue"
 // import Toolbar from "@/components/Toolbar.vue"
 
@@ -26,7 +26,7 @@ export default {
       }
   },
   components: {
-    Home,
+    // Home,
     // Toolbar
   },
   methods: {
@@ -52,15 +52,6 @@ export default {
   padding: 0;
   box-sizing: border-box;
   box-shadow:none;
-}
-
-#wallpaper {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  background: url(assets/imgs/bg2.jpg) no-repeat center center fixed;
-  background-size: cover;
-  z-index: -1;
 }
 
 .toolbar {
