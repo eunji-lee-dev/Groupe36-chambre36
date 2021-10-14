@@ -15,15 +15,19 @@
             <p>Vous avez 1 message en brouillon :</p>
           </div>
           <div class="third">
-            <p>Titre : Je dois vous parler</p>
+            <p>Titre : Un dernier mot</p>
             <p>Dernière édition aujourd'hui à 18h45</p>
           </div>
           <p>
-              Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis, amicitias esse expetendas; itaque, ut quisque minimum firmitatis haberet minimumque virium, ita amicitias appetere maxime; ex eo fieri ut mulierculae magis amicitiarum praesidia quaerant quam viri et inopes quam opulenti et calamitosi quam ii qui putentur beati.<br>
-            <br>
-              Inter has ruinarum varietates a Nisibi quam tuebatur accitus Vrsicinus, cui nos obsecuturos iunxerat imperiale praeceptum, dispicere litis exitialis certamina cogebatur abnuens et reclamans, adulatorum oblatrantibus turmis, bellicosus sane milesque semper et militum ductor sed forensibus iurgiis longe discretus, qui metu sui discriminis anxius cum accusatores quaesitoresque subditivos sibi consociatos ex isdem foveis cerneret emergentes, quae clam palamve agitabantur, occultis Constantium litteris edocebat inplorans subsidia, quorum metu tumor notissimus Caesaris exhalaret.<br>
-            <br>
-              Primi igitur omnium statuuntur Epigonus et Eusebius ob nominum gentilitatem oppressi. praediximus enim Montium sub ipso vivendi termino his vocabulis appellatos fabricarum culpasse tribunos ut adminicula futurae molitioni pollicitos.
+              Pour ceux habitués à vivre depuis toujours à l'ombre de leur mélancolie, la pandémie n'a rien changé à leur vie.
+              <br><br>
+              Voilà maintenant 2 mois que nous sommes tous confinés, 2 mois que je n'ai plus l'inspiration pour mes dessins.
+              J'hésite réellement à fermer ce blog. De toutes manières je n'ai jamais vraiment aimé mes dessins. Peut-être que ce n'est pas pour moi après tout...
+              Je n'ai rien d'autre, aucun talent, rien d'incroyable. Je ne suis qu'une fille complètement paumée qui ne vaut rien.
+              <br><br>
+              Soyez rassurés, je ne vous dérangerai plus à présent.
+              <br>
+              Ceci est mon dernier post.
           </p>
           <div class="fourth" id="btns">
             <button>Publier</button>
@@ -86,7 +90,6 @@ export default {
   .browser section .first {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
   }
   .browser section .first p {
     font-size: 18px;
@@ -94,13 +97,11 @@ export default {
   .browser section .second {
     text-align: left;
     font-size: 13px;
-    margin-bottom: 20px;
     color: #7C7C7C;
   }
   .browser section .third {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
     font-size: 15px;
   }
 
@@ -111,7 +112,7 @@ export default {
   .browser section p{
     text-align: left;
     font-size: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .browser section .fourth {

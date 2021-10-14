@@ -14,7 +14,10 @@
         <img src="../assets/imgs/icon-blog.png" alt="icon">
         <p>Entrez le nouveau mot de passe que
           vous avez reçu par SMS.</p>
+
         <input type="password" placeholder="Nouveau mot de passe" />
+
+        <input v-model="confirmPassword" type="password" placeholder="Nouveau mot de passe"/>
         <button @click="submit" type="button">Validé</button>
       </form>
     </div>
@@ -40,14 +43,13 @@ export default {
   },
   methods: {
     handle_toggle: function () {
-      this.is_show =! this.is_show;
+      this.is_show = !this.is_show;
     },
     submit() {
-      if(this.password == this.confirmPassword) {
+      if (this.password == this.confirmPassword) {
         this.$router.push({name: 'BlogDraft'});
       }
     }
-
   }
 }
 
