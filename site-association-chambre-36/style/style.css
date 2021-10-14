@@ -5,3 +5,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: blue;
+}
+
+nav {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+}
+
+nav a {
+    margin: 0 10px;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.background p {
+    color: white;
+    text-align: center;
+    padding-bottom: 5vh;
+    width: 30%;
+}
