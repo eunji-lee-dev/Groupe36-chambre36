@@ -85,7 +85,42 @@
         </div>
         <!-- End of the left section -->
         <div class="b-right">
-
+            <div class="middleTitle">
+                <p>Boîte de réception - Google</p>
+                <p>24 messages, 3 non lus</p>
+            </div>
+            <div class="emailList">
+                <email-list>
+                    <template v-slot:title>Portail étudiant</template>
+                    <template v-slot:hour>10:14</template>
+                    <template v-slot:description>Tu as une nouvelle note sur ton portail !</template>
+                </email-list>
+                <email-list>
+                    <template v-slot:title>boohoo</template>
+                    <template v-slot:hour>8:01</template>
+                    <template v-slot:description>Prêtes pour la saison des sweats avec boohoo, profite de -50% !</template>
+                </email-list>
+                <email-list>
+                    <template v-slot:title>Doctolib</template>
+                    <template v-slot:hour>hier</template>
+                    <template v-slot:description>Bonjour Sarah, votre médecin vous a laissé un message. Pour le con...</template>
+                </email-list>
+                <email-list>
+                    <template v-slot:title>Portail étudiant</template>
+                    <template v-slot:hour>hier</template>
+                    <template v-slot:description>Tu as une nouvelle note sur ton portail !</template>
+                </email-list>
+                <email-list>
+                    <template v-slot:title>Cheerz</template>
+                    <template v-slot:hour>hier</template>
+                    <template v-slot:description>Essayez de résister... 🐶❤🐱</template>
+                </email-list>
+                <email-list>
+                    <template v-slot:title>Netflix</template>
+                    <template v-slot:hour>Avant hier</template>
+                    <template v-slot:description>Nos tarifs évoluent. Voici pourquoi.</template>
+                </email-list>
+            </div>
         </div>
         <!-- End of the middle section -->
         <div>
@@ -96,13 +131,18 @@
 </template>
 
 <script>
+import EmailList from '@/components/mail/EmailList'
 
 export default {
   name: "MailInterface",
+  components: {
+      EmailList
+  }
 }
 </script>
 
 <style scoped>
+/* Structure */
 #mailInterface {
   height: 70vh;
   width: 80vw;
@@ -123,6 +163,12 @@ export default {
 #mailInterface > div:last-of-type {
     width: 54%;
 }
+
+.b-right {
+    border-right: solid 1px rgb(211, 211, 211);
+}
+
+/* Left section */
 
 .circle-buttons {
   display: flex;
@@ -189,7 +235,31 @@ section > div {
     color: rgb(85, 85, 85);
 }
 
-.b-right {
-    border-right: solid 1px rgb(211, 211, 211);
+/* Middle section */
+.middleTitle {
+    text-align: start;
+    margin: 10px 30px;
 }
+
+.middleTitle p:first-of-type {
+    font-weight: bold;
+    margin-bottom: -2px;
+}
+
+.middleTitle p:last-of-type {
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+}
+
+.emailList {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1500px)
+{
+    .emailList {
+      height: 450px;
+    }
+}
+
 </style>
