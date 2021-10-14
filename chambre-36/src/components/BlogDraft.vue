@@ -60,7 +60,7 @@ export default {
   }
   .browser {
     width: 80%;
-    height: 700px;
+    height: 500px;
     background-image: url("../assets/imgs/bg1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,8 +72,8 @@ export default {
     transform: translateX(-50%);
   }
   .browser section {
-    max-width: 60%;
-    height: 80%;
+    max-width: 80%;
+    height: 350px;
     margin: 20px auto;
     padding: 40px;
     background-color: #fff;

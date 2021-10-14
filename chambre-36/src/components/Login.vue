@@ -10,11 +10,11 @@
         <input type="submit" value="Se connecter">
         <button id="modal_active_btn" @click="handle_toggle" type="button">Mot de passe oublié</button>
       </form>
-      <form v-show="is_show" id="modal" @checkPassword="check">
+      <form v-show="is_show" id="modal">
         <img src="../assets/imgs/icon-blog.png" alt="icon">
         <p>Entrez le nouveau mot de passe que
           vous avez reçu par SMS.</p>
-        <input type="password" placeholder="Nouveau mot de passe"/>
+        <input type="password" placeholder="Nouveau mot de passe" />
         <button @click="submit" type="button">Validé</button>
       </form>
     </div>
@@ -35,22 +35,19 @@ export default {
     return {
       is_show: false,
       password: "3636",
-      confirmPassword: "",
+      confirmPassword: "3636",
     }
   },
   methods: {
     handle_toggle: function () {
       this.is_show =! this.is_show;
     },
-    check(BlogPassword){
-      this.passwordCheck = BlogPassword.passwordEnter
-      console.log(BlogPassword.passwordEnter)
-    },
-      submit() {
+    submit() {
       if(this.password == this.confirmPassword) {
         this.$router.push({name: 'BlogDraft'});
       }
-      }
+    }
+
   }
 }
 
