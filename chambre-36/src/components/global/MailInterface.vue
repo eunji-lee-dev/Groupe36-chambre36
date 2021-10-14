@@ -124,10 +124,6 @@
         </div>
         <!-- End of the middle section -->
         <div>
-            <div>
-
-            </div>
-            <!-- End of the icons section -->
             <email-description>
                 <template v-slot:title>Bilan de santé Mlle Chloé Devers</template>
                 <template v-slot:hour>hier</template>
