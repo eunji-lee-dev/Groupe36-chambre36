@@ -6,6 +6,7 @@
 <!--    <Navbar v-if="password == passwordCheck" />-->
 <!--    <Toolbar v-if="password == passwordCheck" class="toolbar"/>-->
 
+
     <router-view />
   </div>
 </template>

@@ -3,12 +3,19 @@
     <Taskbar class="taskbar"/>
     <div class="browser">
       <BrowserInterface />
-      <form action="" class="login">
+      <form action="" class="login" v-if="!is_show">
         <img src="../assets/imgs/icon-blog.png" alt="icon">
         <input type="text" placeholder="groupe36@edu.devinci.fr">
         <input type="text" placeholder="Mot de passe">
         <input type="submit" value="Se connecter">
-        <p><a href="#">Mot de Passe oublié</a></p>
+        <button id="modal_active_btn" @click="handle_toggle" type="button">Mot de passe oublié</button>
+      </form>
+      <form v-show="is_show" id="modal" @checkPassword="check">
+        <img src="../assets/imgs/icon-blog.png" alt="icon">
+        <p>Entrez le nouveau mot de passe que
+          vous avez reçu par SMS.</p>
+        <input type="password" placeholder="Nouveau mot de passe"/>
+        <button @click="submit" type="button">Validé</button>
       </form>
     </div>
     <Toolbar class="toolbar" />
@@ -22,7 +29,29 @@ import Toolbar from "@/components/Toolbar";
 
 export default {
   name: "Login",
-  components: {Toolbar, BrowserInterface, Taskbar}
+  components: {Toolbar, BrowserInterface, Taskbar},
+
+  data: () => {
+    return {
+      is_show: false,
+      password: "3636",
+      confirmPassword: "",
+    }
+  },
+  methods: {
+    handle_toggle: function () {
+      this.is_show =! this.is_show;
+    },
+    check(BlogPassword){
+      this.passwordCheck = BlogPassword.passwordEnter
+      console.log(BlogPassword.passwordEnter)
+    },
+      submit() {
+      if(this.password == this.confirmPassword) {
+        this.$router.push({name: 'BlogDraft'});
+      }
+      }
+  }
 }
 
 </script>
@@ -72,6 +101,9 @@ body {
   background-color: rgba(255,255,255,0.6);
   border-radius: 5px;
 }
+#all .browser .login .active {
+  display: none;
+}
 #all .browser .login {
   display: flex;
   flex-direction: column;
@@ -98,5 +130,36 @@ body {
   font-size: 14px;
   color: #5A6DFF;
 }
+#modal_active_btn {
+  color: #5A6DFF;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+}
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  background-color: #fff;
+  height: 330px;
+  justify-content: space-around;
+}
+#modal button {
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 16px;
+  background-color: #5FE32F;
+  color: #fff;
+}
+
 
 </style>
